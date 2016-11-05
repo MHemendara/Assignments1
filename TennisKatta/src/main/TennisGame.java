@@ -69,37 +69,37 @@ public class TennisGame {
 	}
 
 	private boolean isAdvantage() {
-		if(plyr1.getScore()>3 && plyr2.getScore()>3 && Math.abs(plyr1.getScore()-plyr2.getScore())==1){
+		if (plyr1.getScore() > 3 && plyr2.getScore() > 3 && Math.abs(plyr1.getScore() - plyr2.getScore()) == 1) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
 
 	private Player getLeadingPlayer() {
-		if(plyr1.getScore()>plyr2.getScore()){
+		if (plyr1.getScore() > plyr2.getScore()) {
 			return plyr1;
-		}else if(plyr1.getScore()<plyr2.getScore()){
+		} else if (plyr1.getScore() < plyr2.getScore()) {
 			return plyr2;
-		}else{
+		} else {
 			return null;
 		}
 	}
 
 	private boolean isGameWon() {
-		if(plyr1.getScore()>3 && Math.abs(plyr1.getScore()-plyr2.getScore())>1){
+		if (plyr1.getScore() > 3 && Math.abs(plyr1.getScore() - plyr2.getScore()) > 1) {
 			return true;
 		}
-		if(plyr2.getScore()>3 && Math.abs(plyr1.getScore()-plyr2.getScore())>1){
+		if (plyr2.getScore() > 3 && Math.abs(plyr1.getScore() - plyr2.getScore()) > 1) {
 			return true;
 		}
 		return false;
 	}
 
 	private boolean isDuce() {
-		if(isEqualScore() && plyr1.getScore()>=3){
+		if (isEqualScore() && plyr1.getScore() >= 3) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
