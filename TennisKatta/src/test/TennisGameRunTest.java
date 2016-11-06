@@ -137,11 +137,11 @@ public class TennisGameRunTest {
 		Assert.assertEquals("", "Win for "+player1, score);
 	}
 
-	private void createScore(int playerOneBalls, int playerTwoBalls) {
-		for (int i = 0; i < playerOneBalls; i++) {
+	private void createScore(int player1Score, int player2Score) {
+		for (int i = 0; i < player1Score; i++) {
 			tg.wonPoint(player1);
 		}
-		for (int i = 0; i < playerTwoBalls; i++) {
+		for (int j = 0; j < player2Score; j++) {
 			tg.wonPoint(player2);
 		}
 	}
